@@ -66,7 +66,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     bluez bluez-utils lxappearance xfce4-settings \
     dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland \
     xorg xorg-server xorg-xwayland gdm wl-clipboard \
-    firefox vscodium dropbox gedit nano obsidian
+    firefox vscodium dropbox gedit nano obsidian  
 
     # Start the bluetooth service
     echo -e "Starting the Bluetooth Service...\n"
