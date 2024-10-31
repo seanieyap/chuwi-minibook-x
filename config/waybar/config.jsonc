@@ -31,15 +31,6 @@
         }
     },
     
-    "custom/power_profile":{
-        //shows the current power profile and switches to next on click
-        "exec": "asusctl profile -p | sed s:'Active profile is'::",
-        "interval": 30,
-        "format": "󰈐{}", 
-        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
-        "signal": 8
-    },
-
    "custom/weather" : {
         //shows the current weather and forecast
         "tooltip" : true,
@@ -133,7 +124,7 @@
     
     "temperature": {
         "thermal-zone": 1,
-        "format": "{temperatureF}°F ",
+        "format": "{temperatureC}°C ",
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C "
     },
@@ -149,6 +140,7 @@
     },
 
     "bluetooth": {
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
 	    "format": " {status}",
 	    "format-disabled": "", // an empty format will hide the module
 	    "format-connected": " {num_connections}",

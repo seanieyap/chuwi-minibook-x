@@ -58,24 +58,34 @@ fi
 ### Install all of the above pacakges ####
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-    yay -S --noconfirm hyprland hypridle kitty waybar \
+    echo -e "Installing essential packages...\n"
+    yay -S --noconfirm hyprland hypridle kitty waybar wl-clipboard \
     swaybg swaylock-effects wofi wlogout mako thunar \
     ttf-jetbrains-mono-nerd noto-fonts-emoji \
-    polkit-gnome python-requests zsh \
+    polkit-gnome python-requests \
     swappy grim slurp pamixer brightnessctl gvfs \
     bluez bluez-utils lxappearance xfce4-settings \
-    dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland \
-    xorg xorg-server xorg-xwayland gdm wl-clipboard \
-    firefox vscodium gedit nano flatpak obsidian tlp keepassxc
+    dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland 
 
-    # Start the bluetooth service
-    echo -e "Starting the Bluetooth Service...\n"
-    sudo systemctl enable --now bluetooth.service
-    sleep 2
-    
     # Clean out other portals
     echo -e "Cleaning out conflicting xdg portals...\n"
     yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
+
+    echo -e "Starting the Bluetooth Service...\n"
+    sudo systemctl enable --now bluetooth.service
+    sleep 2
+
+    # Install gnome as backup
+    echo -e "Installing Gnome...\n"
+    yay -S --noconfirm xorg xorg-server xorg-xwayland gdm
+    
+    # Install wifi and bluetooth utilities
+    echo -e "Installing wifi and bluetooth utilities...\n"
+    yay -S --noconfirm wkgtk blueberry
+
+    echo -e "Installing other misc packages...\n"
+    yay -S --noconfirm firefox vscodium gedit nano flatpak obsidian tlp \
+    keepassxc remmina neofetch neovim zsh
 fi
 
 ### Copy Config Files ###
