@@ -84,8 +84,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     yay -S --noconfirm network-manager-applet blueman
 
     echo -e "Installing other misc packages...\n"
-    yay -S --noconfirm firefox vscodium gedit nano flatpak obsidian \
-    tlp git keepassxc remmina neofetch neovim zsh
+    yay -S --noconfirm extra/bind firefox vscodium gedit nano flatpak obsidian \
+    tlp git keepassxc remmina neofetch neovim zsh tailscale jellyfin-media-player 
 fi
 
 ### Copy Config Files ###
