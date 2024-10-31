@@ -6,9 +6,10 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["clock","custom/weather","hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "bluetooth", "cpu", "temperature", "battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "modules-left": ["clock","custom/weather", "cpu", "temperature", "battery", "hyprland/workspaces"],
+    // "modules-center": [],
+    "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray"],
+    
     "hyprland/window": {
         "format": "{}"
     },
@@ -85,18 +86,8 @@
     },
 
     "cpu": {
-     "interval": 1,
-     "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
-     "format-icons": [
-          "<span color='#69ff94'>▁</span>", // green
-          "<span color='#2aa9ff'>▂</span>", // blue
-          "<span color='#f8f8f2'>▃</span>", // white
-          "<span color='#f8f8f2'>▄</span>", // white
-          "<span color='#ffffa5'>▅</span>", // yellow
-          "<span color='#ffffa5'>▆</span>", // yellow
-          "<span color='#ff9977'>▇</span>", // orange
-          "<span color='#dd532e'>█</span>"  // red
-        ]
+        "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
     },
 
     "temperature": {
