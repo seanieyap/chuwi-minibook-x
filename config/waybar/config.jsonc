@@ -140,7 +140,7 @@
     },
 
     "bluetooth": {
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "exec" : "",
 	    "format": " {status}",
 	    "format-disabled": "", // an empty format will hide the module
 	    "format-connected": " {num_connections}",
