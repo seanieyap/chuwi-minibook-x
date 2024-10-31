@@ -8,7 +8,7 @@
     "height": 50,
     "modules-left": ["clock","custom/weather","hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "bluetooth", "temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network", "bluetooth", "load", "memory", "temperature", "battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -93,6 +93,23 @@
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
+    "temperature": {
+        "thermal-zone": 1,
+        "format": "{temperatureC}°C ",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C "
+    },
+
+    "load": {
+        "interval": 1,
+        "format": "load: {load1} {load5} {load15}"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "{used:0.1f}G/{total:0.1f}G "
+    },
+
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
@@ -121,31 +138,26 @@
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
     },
-    
-    "temperature": {
-        "thermal-zone": 1,
-        "format": "{temperatureC}°C ",
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C "
-    },
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format": "{essid} - {ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)",
+        "format-wifi": "{icon} {signalStrength}%",
+	    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-ethernet": "󰈀",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} 󰈀",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+        "on-click": ""
     },
 
     "bluetooth": {
         "exec" : "",
-	    "format": " {status}",
-	    "format-disabled": "", // an empty format will hide the module
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "", // an empty format will hide the module
 	    "format-connected": " {num_connections}",
 	    "tooltip-format": "{device_alias}",
-	    "tooltip-format-connected": " {device_enumerate}",
-	    "tooltip-format-enumerate-connected": "{device_alias}"
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
     }
 }

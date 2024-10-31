@@ -81,7 +81,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     
     # Install wifi and bluetooth utilities
     echo -e "Installing wifi and bluetooth utilities...\n"
-    yay -S --noconfirm wkgtk blueberry
+    yay -S --noconfirm network-manager-applet blueman
 
     echo -e "Installing other misc packages...\n"
     yay -S --noconfirm firefox vscodium gedit nano flatpak obsidian tlp \
