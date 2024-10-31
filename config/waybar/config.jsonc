@@ -7,7 +7,7 @@
     "gtk-layer-shell": true,
     "height": 50,
     "modules-left": ["clock","custom/weather", "hyprland/workspaces"],
-    "modules-center": ["cpu", "temperature", "battery"],
+    "modules-center": ["temperature", "battery"],
     "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray"],
     
     "hyprland/window": {
@@ -83,12 +83,6 @@
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
-
-    "cpu": {
-        "interval": 10,
-        "format": "{}% ",
-        "max-length": 10
     },
 
     "temperature": {
