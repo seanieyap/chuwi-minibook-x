@@ -7,8 +7,8 @@
     "gtk-layer-shell": true,
     "height": 50,
     "modules-left": ["clock","custom/weather", "hyprland/workspaces"],
-    "modules-center": ["temperature", "battery"],
-    "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray"],
+    // "modules-center": [],
+    "modules-right": ["network", "bluetooth", "temperature", "battery", "backlight", "pulseaudio", "pulseaudio#microphone","tray"],
     
     "hyprland/window": {
         "format": "{}"
@@ -95,7 +95,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
-        "format-muted": " Muted",
+        "format-muted": "",
         "on-click": "pamixer -t",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5",
@@ -114,7 +114,7 @@
     "pulseaudio#microphone": {
         "format": "{format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": " Muted",
+        "format-source-muted": "",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
