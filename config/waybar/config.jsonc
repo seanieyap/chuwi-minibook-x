@@ -6,8 +6,8 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["clock","custom/weather", "cpu", "temperature", "battery", "hyprland/workspaces"],
-    // "modules-center": [],
+    "modules-left": ["clock","custom/weather", "hyprland/workspaces"],
+    "modules-center": ["cpu", "temperature", "battery"],
     "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray"],
     
     "hyprland/window": {
@@ -86,8 +86,9 @@
     },
 
     "cpu": {
-        "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "interval": 10,
+        "format": "{}% ",
+        "max-length": 10
     },
 
     "temperature": {
