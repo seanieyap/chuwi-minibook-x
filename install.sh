@@ -19,7 +19,6 @@
 # noto-fonts-emoji: fonts needed by the weather script in the top bar
 # polkit-gnome: needed to get superuser access on some graphical appliaction
 # python-requests: needed for the weather module script to execute
-# starship: allows to customize the shell prompt
 # swappy: This is a screenshot editor tool
 # grim: This is a screenshot tool it grabs images from a Wayland compositor
 # slurp: This helps with screenshots, it selects a region in a Wayland compositor
@@ -66,7 +65,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     swappy grim slurp pamixer brightnessctl gvfs \
     bluez bluez-utils lxappearance xfce4-settings \
     dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland \
-    vscodium dropbox
+    xorg xorg-server xorg-xwayland gdm wl-clipboard \
+    firefox vscodium dropbox gedit nano obsidian
 
     # Start the bluetooth service
     echo -e "Starting the Bluetooth Service...\n"
@@ -82,12 +82,7 @@ fi
 read -n1 -rep 'Would you like to copy config files? (y,n)' CFG
 if [[ $CFG == "Y" || $CFG == "y" ]]; then
     echo -e "Copying config files...\n"
-    cp -R hypr ~/.config/
-    cp -R kitty ~/.config/
-    cp -R mako ~/.config/
-    cp -R waybar ~/.config/
-    cp -R swaylock ~/.config/
-    cp -R wofi ~/.config/
+    cp -R ./config/ ~/.config/
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
