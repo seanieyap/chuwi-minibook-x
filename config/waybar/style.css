@@ -65,12 +65,20 @@ tooltip {
     opacity: 0.8;
     padding: 0px 10px;
     margin: 3px 0px;
-    margin-top: 10px;
+    margin-top: 7px;
     border: 1px solid #181825;
 }
 
-#temperature {
+#cpu {
     border-radius: 10px 0px 0px 10px;
+}
+
+#memory {
+    border-radius: 0px;
+}
+
+#temperature {
+    border-radius: 0px 10px 10px 0px;
 }
 
 #temperature.critical {
@@ -103,7 +111,7 @@ tooltip {
 #user {
     color: #fab387;
     border-radius: 10px 0px 0px 10px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 #clock {
@@ -139,7 +147,7 @@ tooltip {
 
 #battery {
     color: #a6e3a1;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
     margin-right: 10px;
     border-left: 0px;
 }
