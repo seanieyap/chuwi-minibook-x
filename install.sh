@@ -96,7 +96,6 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
-    chmod +x ~/.config/waybar/scripts/waybar-wttr.py
     chmod +x ./update.sh
 fi
 
