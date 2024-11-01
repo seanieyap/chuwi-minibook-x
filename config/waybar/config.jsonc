@@ -6,9 +6,8 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["user", "cpu", "memory", "temperature", ],
-    // "modules-center": ["hyprland/window"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["user", "cpu", "memory", "temperature", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "battery", "backlight", "pulseaudio", "pulseaudio#microphone", "clock"],
     
     "hyprland/window": {
