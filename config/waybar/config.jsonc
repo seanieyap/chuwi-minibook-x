@@ -136,7 +136,7 @@
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
-    },
+    }
 
     // "network": {
     //     // "interface": "wlp2s0",
