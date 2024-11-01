@@ -6,10 +6,10 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["cpu", "memory", "temperature", "battery"],
+    "modules-left": ["user", "cpu", "memory", "temperature", ],
     // "modules-center": ["hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray", "clock"],
+    "modules-right": ["battery", "network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray", "clock"],
     
     "hyprland/window": {
         "format": "👉 {}",
@@ -18,6 +18,14 @@
             "(.*) - kitty": "> [$1]"
         },
         "separate-outputs": true
+    },
+
+    "user": {
+        "format": "{user}",
+        "interval": 60,
+        "height": 30,
+        "width": 30,
+        "icon": true,
     },
 
     "memory": {

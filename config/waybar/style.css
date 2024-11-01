@@ -59,7 +59,8 @@ tooltip {
 #tray,
 #backlight,
 #cpu,
-#memory {
+#memory,
+#user {
     background: #1e1e2e;
     opacity: 0.8;
     padding: 0px 10px;
@@ -99,18 +100,21 @@ tooltip {
     margin-right: 60px;
 }
 
+#user {
+    color: #fab387;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 10px;
+}
+
 #clock {
     color: #fab387;
     border-radius: 10px 0px 0px 10px;
-    margin-left: 10px;
-    border-right: 0px;
+    margin-right: 10px;
 }
 
 #network {
     color: #f9e2af;
     border-radius: 10px 0px 0px 10px;
-    border-left: 0px;
-    border-right: 0px;
 }
 
 #bluetooth {
