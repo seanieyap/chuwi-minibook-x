@@ -6,12 +6,30 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 50,
-    "modules-left": ["clock","wlr/taskbar", "hyprland/workspaces"],
-    // "modules-center": [],
-    "modules-right": ["network", "bluetooth", "temperature", "battery", "backlight", "pulseaudio", "pulseaudio#microphone","tray"],
+    "modules-left": ["cpu", "memory", "temperature", "battery"],
+    // "modules-center": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray", "clock"],
     
     "hyprland/window": {
-        "format": "{}"
+        "format": "👉 {}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "🌎 $1",
+            "(.*) - kitty": "> [$1]"
+        },
+        "separate-outputs": true
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "{}% ",
+        "max-length": 10
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "{}% ",
+        "max-length": 10
     },
 
     "hyprland/workspaces": {
@@ -20,25 +38,6 @@
         "on-click": "activate",
         "persistent-workspaces": {
             "*": 5 // 5 workspaces by default on every monitor
-        }
-    },
-    
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "icon-size": 14,
-        "icon-theme": "Numix-Circle",
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "ignore-list": [
-        "Alacritty"
-        ],
-        "app_ids-mapping": {
-        "firefoxdeveloperedition": "firefox-developer-edition"
-        },
-        "rewrite": {
-            "Firefox Web Browser": "Firefox",
-            "Foot Server": "Terminal"
         }
     },
 
