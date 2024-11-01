@@ -11,11 +11,7 @@
     "modules-right": ["tray", "battery", "backlight", "pulseaudio", "pulseaudio#microphone", "clock"],
     
     "hyprland/window": {
-        "format": "👉 {}",
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "🌎 $1",
-            "(.*) - kitty": "> [$1]"
-        },
+        "format": "{}",
         "separate-outputs": true
     },
 
