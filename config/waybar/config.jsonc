@@ -8,7 +8,7 @@
     "height": 50,
     "modules-left": ["user", "cpu", "memory", "temperature", "hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "battery", "backlight", "pulseaudio", "pulseaudio#microphone", "clock"],
+    "modules-right": ["tray", "pulseaudio", "pulseaudio#microphone", "battery", "backlight", "clock"],
     
     "hyprland/window": {
         "format": "{}",
