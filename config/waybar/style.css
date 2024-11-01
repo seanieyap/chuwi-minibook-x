@@ -117,22 +117,22 @@ tooltip {
     margin-right: 10px;
 }
 
-/* #clock {
+#clock {
     color: #fab387;
     border-radius: 10px;
     margin-right: 10px;
 }
 
-#network {
+/* #network {
     color: #f9e2af;
     border-radius: 10px 0 0 10px;
-} */
+}
 
 #bluetooth {
     color: #89b4fa;
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
-} 
+}  */
 
 #pulseaudio {
     color: #89b4fa;
