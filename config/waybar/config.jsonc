@@ -9,7 +9,7 @@
     "modules-left": ["user", "cpu", "memory", "temperature", ],
     // "modules-center": ["hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["battery", "network", "bluetooth", "backlight", "pulseaudio", "pulseaudio#microphone","tray", "clock"],
+    "modules-right": ["battery", "backlight", "network", "bluetooth", "pulseaudio", "pulseaudio#microphone","tray", "clock"],
     
     "hyprland/window": {
         "format": "👉 {}",
